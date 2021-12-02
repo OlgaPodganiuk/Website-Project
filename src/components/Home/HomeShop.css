@@ -1,0 +1,22 @@
+.home-shop {
+  border-bottom: 1px #8FBC8F solid;
+  margin: 2rem 5rem;
+  padding: 10px;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  justify-content: center;
+}
+
+.items {
+  margin: auto;
+  text-align: center;
+}
+
+.img {
+  width:250px;
+}

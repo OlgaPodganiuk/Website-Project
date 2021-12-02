@@ -1,15 +1,13 @@
-// import logo from './logo.svg';
-// import './App.css';
+import { Fragment } from "react";
+import Header from "./components/Header/Header";
+import Home from "./components/Home/Home";
 
 function App() {
   return (
-    <div>
-      <header>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-    </div>
+    <Fragment>
+      <Header />
+      <Home />
+    </Fragment>
   );
 }
 

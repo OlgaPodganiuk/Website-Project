@@ -1,0 +1,12 @@
+#header-home {
+  background: url('../img/header.jpg') no-repeat center right / cover;
+  height: 30vh;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 0.5rem;
+  margin: auto;
+  overflow: hidden;
+}

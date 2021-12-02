@@ -1,0 +1,36 @@
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+#main-nav p {
+  margin: 0.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+#main-nav ul {
+  display: flex;
+}
+
+#main-nav li {
+  padding: 1rem 1.5rem;
+}
+
+#main-nav li button {
+  font-family: 'Dosis', sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px transparent solid;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+
+#main-nav li button:hover {
+  border-color: #ccc;
+}
+  
