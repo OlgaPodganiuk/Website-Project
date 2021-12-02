@@ -1,0 +1,11 @@
+.home-about {
+  border-bottom: 1px #8FBC8F solid;
+  margin: 2rem 5rem;
+  padding: 10px;
+  text-align: center;
+}
+
+.home-about p:first-child {
+  font-size: 20px;
+  text-transform: uppercase;
+}
