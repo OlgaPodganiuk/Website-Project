@@ -6,7 +6,7 @@ const NavBar = (props) => {
 
   return (
     <nav id='main-nav'>
-      <p><i className="fas fa-seedling fa-2x"></i> iHerb</p>
+      <p><i className="fas fa-seedling fa-2x"></i> iHerb-rita</p>
       <ul>
         <li>
           <Link to='/home'>
@@ -23,10 +23,6 @@ const NavBar = (props) => {
             <button><i className="fas fa-shopping-cart"></i> Cart</button>
           </Link>
         </li>
-        {/* <NavBarListItem onLink='../About/About'  onContent='About'/>
-        <NavBarListItem onContent='Shop' />
-        <NavBarListItem onContent='Contact'/>
-        <NavBarListItem onContent={shoppingCart}/> */}
       </ul>
     </nav>
   );
