@@ -1,4 +1,7 @@
 import react from 'react';
+import img1 from '../img/1.jpg';
+import img2 from '../img/2.jpg';
+import img3 from '../img/3.jpg';
 
 import './HomeShop.css';
 
@@ -7,19 +10,15 @@ const HomeShop = () => {
     <div className='home-shop'>
       <div className='flex'>
         <div className='items'>
-          <img className='img' src='../img/1.jpg' alt='Vitamin D3' />
-          <p>Вітамін D3 для дітей</p>
+          <img className='img' src={img1} alt='Все для дітей' />
         </div>
         <div className='items'>
-          <img className='img' src='../img/2.jpg' alt='Vitamin C' />
-          <p>Вітамін C в капсулах</p>
+          <img className='img' src={img2} alt='Вітаміни' />
         </div>
         <div className='items'>
-          <img className='img' src='../img/3.jpg' alt='Lipbalm' />
-          <p>Бальзам для губ</p>
+          <img className='img' src={img3} alt='Косметичні засоби' />
         </div>
       </div>
-      <button className='btn'>більше</button>
     </div>
   );
 };

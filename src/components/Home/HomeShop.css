@@ -1,6 +1,6 @@
 .home-shop {
   border-bottom: 1px #8FBC8F solid;
-  margin: 2rem 5rem;
+  margin: 2rem 0;
   padding: 10px;
   text-align: center;
 }
@@ -10,13 +10,16 @@
   flex-direction: row;
   align-items: center; 
   justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .items {
-  margin: auto;
+  margin: 0 1rem;
   text-align: center;
 }
 
 .img {
+  object-fit: cover;
   width:250px;
+  height: 250px;
 }
