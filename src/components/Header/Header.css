@@ -1,5 +1,5 @@
 #header-home {
-  /* background: url('../img/header.jpg') no-repeat center right / cover; */
+  background: url('../img/header.jpg') no-repeat center right / cover;
   height: 30vh;
   color: #fff;
 }
@@ -10,3 +10,4 @@
   margin: auto;
   overflow: hidden;
 }
+
