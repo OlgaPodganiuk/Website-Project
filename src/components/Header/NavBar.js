@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+
+import HeaderCartButton from './HeaderCartButton';
 import './NavBar.css';
 
 const NavBar = (props) => {
@@ -9,19 +11,17 @@ const NavBar = (props) => {
       <p><i className="fas fa-seedling fa-2x"></i> iHerb-rita</p>
       <ul>
         <li>
-          <Link to='/home'>
-            <button>Home</button>
-          </Link>
+          <NavLink activeClassName='active' to='/home'>
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to='/meals'>
-            <button>Shop</button>
-          </Link>
+          <NavLink activeClassName='active' to='/meals'>
+            Shop
+          </NavLink>
         </li>
         <li>
-          <Link to='/cart'>
-            <button><i className="fas fa-shopping-cart"></i> Cart</button>
-          </Link>
+            <HeaderCartButton onClick={props.onShowCart}/>
         </li>
       </ul>
     </nav>

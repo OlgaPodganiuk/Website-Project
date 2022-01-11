@@ -5,6 +5,12 @@
   animation: meals-appear 1s ease-out forwards;
 }
 
+.mealsList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5rem;
+}
+
 .MealsLoading {
   text-align: center;
   color: white;
