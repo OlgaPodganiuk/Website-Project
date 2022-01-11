@@ -18,7 +18,7 @@
   padding: 1rem 1.5rem;
 }
 
-#main-nav li a{
+.menu-btn {
   font-family: 'Dosis', sans-serif;
   font-size: 1rem;
   color: #fff;

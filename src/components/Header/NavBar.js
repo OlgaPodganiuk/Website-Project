@@ -11,17 +11,17 @@ const NavBar = (props) => {
       <p><i className="fas fa-seedling fa-2x"></i> iHerb-rita</p>
       <ul>
         <li>
-          <NavLink activeClassName='active' to='/home'>
+          <NavLink className='menu-btn'  activeClassName='active' to='/home'>
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink activeClassName='active' to='/meals'>
+          <NavLink className='menu-btn' activeClassName='active' to='/meals'>
             Shop
           </NavLink>
         </li>
         <li>
-            <HeaderCartButton onClick={props.onShowCart}/>
+          <HeaderCartButton onClick={props.onShowCart}/>
         </li>
       </ul>
     </nav>

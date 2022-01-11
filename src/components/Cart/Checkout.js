@@ -3,18 +3,17 @@ import { useRef, useState } from 'react';
 import classes from './Checkout.module.css';
 
 const isEmpty = (value) => value.trim() === '';
-const isFiveChars = (value) => value.trim().length === 5;
 
 const Checkout = (props) => {
   const [formInputsValidity, setFormInputsValidity] = useState({
     name: true,
-    street: true,
+    phone: true,
     city: true,
     postalCode: true,
   });
 
   const nameInputRef = useRef();
-  const streetInputRef = useRef();
+  const phoneInputRef = useRef();
   const postalCodeInputRef = useRef();
   const cityInputRef = useRef();
 
@@ -22,25 +21,25 @@ const Checkout = (props) => {
     event.preventDefault();
 
     const enteredName = nameInputRef.current.value;
-    const enteredStreet = streetInputRef.current.value;
+    const enteredPhone = phoneInputRef.current.value;
     const enteredPostalCode = postalCodeInputRef.current.value;
     const enteredCity = cityInputRef.current.value;
 
     const enteredNameIsValid = !isEmpty(enteredName);
-    const enteredStreetIsValid = !isEmpty(enteredStreet);
+    const enteredPhoneIsValid = !isEmpty(enteredPhone);
     const enteredCityIsValid = !isEmpty(enteredCity);
-    const enteredPostalCodeIsValid = isFiveChars(enteredPostalCode);
+    const enteredPostalCodeIsValid = !isEmpty(enteredPostalCode);
 
     setFormInputsValidity({
       name: enteredNameIsValid,
-      street: enteredStreetIsValid,
+      phone: enteredPhoneIsValid,
       city: enteredCityIsValid,
       postalCode: enteredPostalCodeIsValid,
     });
 
     const formIsValid =
       enteredNameIsValid &&
-      enteredStreetIsValid &&
+      enteredPhoneIsValid &&
       enteredCityIsValid &&
       enteredPostalCodeIsValid;
 
@@ -50,7 +49,7 @@ const Checkout = (props) => {
 
     props.onConfirm({
       name: enteredName,
-      street: enteredStreet,
+      phone: enteredPhone,
       city: enteredCity,
       postalCode: enteredPostalCode,
     });
@@ -59,8 +58,8 @@ const Checkout = (props) => {
   const nameControlClasses = `${classes.control} ${
     formInputsValidity.name ? '' : classes.invalid
   }`;
-  const streetControlClasses = `${classes.control} ${
-    formInputsValidity.street ? '' : classes.invalid
+  const phoneControlClasses = `${classes.control} ${
+    formInputsValidity.phone ? '' : classes.invalid
   }`;
   const postalCodeControlClasses = `${classes.control} ${
     formInputsValidity.postalCode ? '' : classes.invalid
@@ -72,32 +71,32 @@ const Checkout = (props) => {
   return (
     <form className={classes.form} onSubmit={confirmHandler}>
       <div className={nameControlClasses}>
-        <label htmlFor='name'>Your Name</label>
+        <label htmlFor='name'>Повне ім'я (ПІБ)</label>
         <input type='text' id='name' ref={nameInputRef} />
-        {!formInputsValidity.name && <p>Please enter a valid name!</p>}
+        {!formInputsValidity.name && <p>Будь ласка, введіть правильне ім'я!</p>}
       </div>
-      <div className={streetControlClasses}>
-        <label htmlFor='street'>Street</label>
-        <input type='text' id='street' ref={streetInputRef} />
-        {!formInputsValidity.street && <p>Please enter a valid street!</p>}
+      <div className={phoneControlClasses}>
+        <label htmlFor='phone'>Номер телефону</label>
+        <input type='text' id='phone' ref={phoneInputRef} />
+        {!formInputsValidity.phone && <p>Будь ласка, введіть правильний номер телефону!</p>}
       </div>
       <div className={postalCodeControlClasses}>
-        <label htmlFor='postal'>Postal Code</label>
+        <label htmlFor='postal'>Відділення Нової пошти</label>
         <input type='text' id='postal' ref={postalCodeInputRef} />
         {!formInputsValidity.postalCode && (
-          <p>Please enter a valid postal code (5 characters long)!</p>
+          <p>Будь ласка, введіть правильне відділення нової пошти!</p>
         )}
       </div>
       <div className={cityControlClasses}>
-        <label htmlFor='city'>City</label>
+        <label htmlFor='city'>Місто, область</label>
         <input type='text' id='city' ref={cityInputRef} />
-        {!formInputsValidity.city && <p>Please enter a valid city!</p>}
+        {!formInputsValidity.city && <p>Будь ласка, введіть правильні дані!</p>}
       </div>
       <div className={classes.actions}>
         <button type='button' onClick={props.onCancel}>
-          Cancel
+          Відмінити
         </button>
-        <button className={classes.submit}>Confirm</button>
+        <button className={classes.submit}>Підтвердити</button>
       </div>
     </form>
   );

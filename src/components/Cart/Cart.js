@@ -12,7 +12,7 @@ const Cart = (props) => {
   const [didSubmit, setDidSubmit] = useState(false);
   const cartCtx = useContext(CartContext);
 
-  const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
+  const totalAmount = `₴${cartCtx.totalAmount.toFixed(2)}`;
   const hasItems = cartCtx.items.length > 0;
 
   const cartItemRemoveHandler = (id) => {
@@ -59,11 +59,11 @@ const Cart = (props) => {
   const modalActions = (
     <div className={classes.actions}>
       <button className={classes['button--alt']} onClick={props.onClose}>
-        Close
+        Закрити
       </button>
       {hasItems && (
         <button className={classes.button} onClick={orderHandler}>
-          Order
+          Купити
         </button>
       )}
     </div>
@@ -73,7 +73,7 @@ const Cart = (props) => {
     <React.Fragment>
       {cartItems}
       <div className={classes.total}>
-        <span>Total Amount</span>
+        <span>Загальна сума</span>
         <span>{totalAmount}</span>
       </div>
       {isCheckout && (
@@ -87,12 +87,12 @@ const Cart = (props) => {
 
   const didSubmitModalContent = (
     <React.Fragment>
-      <p>Successfully sent the order!</p>
+      <p>Дякуємо! <br></br> Ваше замовлення надіслано. Очікуйте, з вами зв'яжеться наш адміністратор.</p>
       <div className={classes.actions}>
-      <button className={classes.button} onClick={props.onClose}>
-        Close
-      </button>
-    </div>
+        <button className={classes.button} onClick={props.onClose}>
+         Закрити
+        </button>
+      </div>
     </React.Fragment>
   );
 

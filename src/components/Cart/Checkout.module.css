@@ -9,7 +9,6 @@
 }
 
 .control label {
-  font-weight: bold;
   margin-bottom: 0.25rem;
   display: block;
 }
@@ -30,7 +29,7 @@
 
 .actions button {
   font: inherit;
-  color: #5a1a01;
+  color: #447c44;
   cursor: pointer;
   background-color: transparent;
   border: none;
@@ -40,18 +39,19 @@
 
 .actions button:hover,
 .actions button:active {
-  background-color: #ffe6dc;
+  background-color: #c4e9c4e1;
 }
 
 .actions .submit {
-  border: 1px solid #5a1a01;
-  background-color: #5a1a01;
+  border: 1px solid #447c44;
+  background-color: #447c44;
   color: white;
 }
 
 .actions .submit:hover,
 .actions .submit:active {
-  background-color: #7a2706;
+  background-color: #447c44d7;
+  border-color: #447c44b9;
 }
 
 .invalid label {
