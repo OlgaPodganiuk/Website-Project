@@ -16,7 +16,7 @@ const NavBar = (props) => {
           </NavLink>
         </li>
         <li>
-          <NavLink className='menu-btn' activeClassName='active' to='/meals'>
+          <NavLink className='menu-btn' activeClassName='active' to='/products'>
             Shop
           </NavLink>
         </li>

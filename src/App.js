@@ -8,9 +8,7 @@ function App() {
   return (
     <Fragment>
       <Header />
-      <div>
-        <Home />
-      </div> 
+      <Home />
       <Footer />
     </Fragment>
   );

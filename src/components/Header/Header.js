@@ -4,7 +4,7 @@ import { useState } from 'react';
 import NavBar from './NavBar';
 import './Header.css';
 import Home from '../Home/Home';
-import Meals from '../Meals/Meals';
+import Products from '../Products/Products';
 import Cart from '../Cart/Cart';
 import CartProvider from '../../store/CartProvider';
 
@@ -32,8 +32,8 @@ const Header = (props) => {
           <Route path='/home'>
             <Home />
           </Route>
-          <Route path='/meals'>
-            <Meals />
+          <Route path='/products'>
+            <Products />
           </Route>
         </main>
       </CartProvider>
