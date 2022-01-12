@@ -33,3 +33,20 @@ img {
   text-transform: uppercase;
   font-size: 13px;
 }
+
+.menu-btn {
+  font-size: 1rem;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px transparent solid;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  text-decoration: none;
+}
+
+.menu-btn:hover,
+.menu-btn:active {
+  border-color: #ccc;
+}

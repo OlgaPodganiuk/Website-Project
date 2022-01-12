@@ -4,7 +4,7 @@ import Card from '../UI/Card';
 import ProductItem from './ProductItem/ProductItem';
 import classes from './AvailableProducts.module.css';
 
-const AvailableProducts = () => {
+const AvailableProducts = (props) => {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [httpError, setHttpError] = useState();
@@ -12,7 +12,7 @@ const AvailableProducts = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       const response = await fetch(
-        'https://react-http-82e1c-default-rtdb.europe-west1.firebasedatabase.app//meals.json'
+        props.onData
       );
 
       if (!response.ok) {
@@ -73,6 +73,7 @@ const AvailableProducts = () => {
   return (
     <section className={classes.products}>
       <Card>
+        <h2>{props.onCategory}</h2>
         <ul className={classes.productsList}>{productsList}</ul>
       </Card>
     </section>

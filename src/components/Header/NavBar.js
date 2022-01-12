@@ -12,12 +12,12 @@ const NavBar = (props) => {
       <ul>
         <li>
           <NavLink className='menu-btn'  activeClassName='active' to='/home'>
-            Home
+            Головна
           </NavLink>
         </li>
         <li>
           <NavLink className='menu-btn' activeClassName='active' to='/products'>
-            Shop
+            Продукти
           </NavLink>
         </li>
         <li>

@@ -13,7 +13,7 @@ const HeaderCartButton = (props) => {
     return curNumber + item.amount;
   }, 0);
 
-  const btnClasses = `${classes.button} ${btnIsHighlighted ? classes.bump : ''}`;
+  const btnClasses = `menu-btn ${btnIsHighlighted ? classes.bump : ''}`;
 
   useEffect(() => {
     if (items.length === 0) {
@@ -35,7 +35,7 @@ const HeaderCartButton = (props) => {
       <span className={classes.icon}>
         <i className="fas fa-shopping-cart"></i>
       </span>
-      <span>Cart</span>
+      <span>Корзина</span>
       <span className={classes.badge}>{numberOfCartItems}</span>
     </button>
   );
