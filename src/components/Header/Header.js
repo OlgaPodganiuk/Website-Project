@@ -1,10 +1,11 @@
-import { Route } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 import { useState } from 'react';
 
 import NavBar from './NavBar';
 import './Header.css';
 import Home from '../Home/Home';
 import Products from '../Products/Products';
+import ProductCategory from '../Products/ProductCategory';
 import Cart from '../Cart/Cart';
 import CartProvider from '../../store/CartProvider';
 
@@ -29,11 +30,17 @@ const Header = (props) => {
           </div>
         </header>
         <main>
+          <Route path='/' exact>
+            <Redirect to='/home' />
+          </Route>
           <Route path='/home'>
             <Home />
           </Route>
           <Route path='/products'>
             <Products />
+          </Route>
+          <Route path='/product-category/:productId'>
+            <ProductCategory />
           </Route>
         </main>
       </CartProvider>
