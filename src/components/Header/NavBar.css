@@ -15,7 +15,7 @@
   display: flex;
 }
 
-#main-nav li {
+#main-nav ul li {
   padding: 1rem 1.5rem;
 }
 
@@ -30,7 +30,7 @@
     text-align: right;
   }
 
- #main-nav li {
+  #main-nav ul li {
     padding: 0.8rem;
   }
 }

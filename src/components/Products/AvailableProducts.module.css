@@ -34,6 +34,10 @@
   padding: 0;
 }
 
+.products a {
+  text-decoration: none;
+}
+
 @keyframes products-appear {
   from {
     opacity: 0;
