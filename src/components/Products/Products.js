@@ -19,18 +19,6 @@ const Products = () => {
           <h2>Різне</h2>
         </Link>
       </Card>
-      {/* <AvailableProducts
-        onData="https://react-http-82e1c-default-rtdb.europe-west1.firebasedatabase.app/products//kids.json"
-        onCategory="Продукти для дітей"
-      />
-      <AvailableProducts
-        onData="https://react-http-82e1c-default-rtdb.europe-west1.firebasedatabase.app/products//adults.json"
-        onCategory="Продукти для дорослих"
-      />
-      <AvailableProducts
-        onData="https://react-http-82e1c-default-rtdb.europe-west1.firebasedatabase.app/products//other.json"
-        onCategory="Різне"
-      /> */}
     </section>
   );
 };
