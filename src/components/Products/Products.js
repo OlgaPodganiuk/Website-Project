@@ -1,7 +1,5 @@
-import { Fragment } from "react";
 import { Link } from 'react-router-dom'
 
-import AvailableProducts from "./AvailableProducts";
 import classes from "./AvailableProducts.module.css";
 import Card from "../UI/Card";
 
